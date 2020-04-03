@@ -5,16 +5,9 @@ export default class Board extends React.Component {
     letter: "A"
   };
 
-  static update(val) {
-    Board.state.setState({
-      letter: "O"
-    });
-  }
-
   render() {
     return (
       <div>
-        <div className="row">{this.renderBut()}</div>
         <div className="row">{this.renderBut()}</div>
       </div>
     );
@@ -22,9 +15,15 @@ export default class Board extends React.Component {
 
   renderBut() {
     let LetterBut = [];
+    let result = [];
     let currentletter = Board.state.letter;
     console.log(currentletter);
-    for (var i = 0; i < 13; i++) {
+    for (var i = 0; i < 26; i++) {
+      /*       if (i < 13) {
+
+      } else {
+        
+      } */
       LetterBut.push(<button className="butLettre">{currentletter}</button>);
       currentletter = String.fromCharCode(currentletter.charCodeAt() + 1);
     }
@@ -34,7 +33,7 @@ export default class Board extends React.Component {
       letter: currentletter
     });
  */
-    Board.update();
+
     return LetterBut;
   }
 }
