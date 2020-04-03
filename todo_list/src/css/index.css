@@ -1,0 +1,28 @@
+.delItem {
+  padding: 0.5em;
+  color: red;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+}
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+table {
+  margin-top: 2em;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.Todo {
+  min-width: 20em;
+  max-width: 20em;
+}
